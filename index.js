@@ -1,7 +1,9 @@
 var express= require('express');
 var mongoose=require('mongoose');
-var userRouter=require('./routes/user.routes');
 var bodyParser=require('body-parser');
+var userRouter=require('./routes/user.routes');
+var appointmentRouter=require('./routes/appointment.routes');
+var branchRouter=require('./routes/branch.routes');
 
 var app=express();
 
@@ -23,3 +25,5 @@ app.use(bodyParser.json());
 // })
 
 app.use('/user',userRouter);
+app.use('/appointment',appointmentRouter);
+app.use('/branch',branchRouter);

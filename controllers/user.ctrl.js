@@ -4,7 +4,7 @@ module.exports={
 
     getUser:function(req,res){
         var count=0;
-        var pageSize= +req.params.pagesize || 3;
+        var pageSize= +req.params.pagesize || 10;
         var pageIndex= +req.params.pageindex || 0;
         var sortBy= req.query.sort || "name";
         var sortDirection= req.query.sortDirection?(req.query.sortDirection).toLowerCase()==="asc"?"":"-":"-";
