@@ -19,10 +19,10 @@ module.exports={
 
 nearbyBranches:function(req,res){
 
-    var latit= req.params.latitude || "1.279132";
-    var longit= req.params.longitude || "103.85464";
+    var latit= req.params.latit || "1.279132";
+    var longit= req.params.longit || "103.85464";
 
-    Branch.find({},{'__v':0})
+    Branch.find({latitude:latit,longitude:longit},{'__v':0})
     .exec()
     .then(function(branches){
         console.log(branches);
